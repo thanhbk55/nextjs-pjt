@@ -6,11 +6,9 @@ const layoutStyle = {
   border: '1px solid #DDD'
 }
 
-export default Page => {
-  return () => (
-    <div style={layoutStyle}>
-      <Header/>
-      <Page />
-    </div>
-  )
-}
+export default props => (
+  <div style={layoutStyle}>
+    <Header/>
+    {props.children}
+  </div>
+)
